@@ -1,1 +1,29 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversão bordas randius com javascript e metodo this</title>
+</head>
+<body>
+    <div class="title">
+        <h3>Exercio de borda randius, por favor digite valores entre 0 a 99 pixels.</h3>
+      </div>
+      <div class="container">
+        <div class="leftCube">
+          <input oninput="document.querySelector('.quadrado').style.borderTopLeftRadius = this.value + 'px';" type="text" maxlength='2' onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+          <input oninput="document.querySelector('.quadrado').style.borderBottomLeftRadius = this.value + 'px';" type="text" maxlength='2' onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+        </div>
+        <div class="bloco">
+          <div class="quadrado">
+          </div>
+        </div>
+        <div class="rightCube">
+         <input oninput="document.querySelector('.quadrado').style.borderTopRightRadius = this.value + 'px';" type="text" maxlength='2' onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+          <input oninput="document.querySelector('.quadrado').style.borderBottomRightRadius = this.value + 'px';" type="text" maxlength='2' onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+        </div>
+      </div>
+</body>
+</html>
