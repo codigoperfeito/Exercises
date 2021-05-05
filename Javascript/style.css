@@ -1,0 +1,55 @@
+html{
+    display:flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  input{
+    width:30px;
+    height: 30px;
+    background-color: #212121;
+    border: 3px solid #42dcff;
+    border-radius: 4px;  
+    display:flex;
+    color: white;
+    text-align: center;
+    margin: 5px;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+  .leftCube{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .rightCube{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bloco{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .title{
+    text-align: center;
+    width: 300px;
+    margin: auto;
+  }
+  .quadrado{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: #42dcff;
+  }
