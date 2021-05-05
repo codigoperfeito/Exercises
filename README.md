@@ -1,2 +1,2 @@
 # Exercises
- exercises done
+Alguns exercicios feitos.
