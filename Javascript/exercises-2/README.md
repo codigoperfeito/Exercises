@@ -1,3 +1,5 @@
+<b>exercises of border randius with this.</b>
+
 in he a exercises of change the border randius of cube. This all changeing on live.
 
 ![Gif exercises 2](https://github.com/codigoperfeito/Exercises/blob/main/Javascript/exercises-2/gif.gif?raw=true)
