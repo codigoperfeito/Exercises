@@ -1,4 +1,4 @@
-<b>exercises of border randius with this.</b>
+<h3><b>EXERCISES OF BORDER-RANDIUS WITH METHOD THIS.</b></h3>
 
 in he a exercises of change the border randius of cube. This all changeing on live.
 
