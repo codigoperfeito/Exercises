@@ -1,2 +1,0 @@
-# Exercises
-Alguns exercicios feitos.
