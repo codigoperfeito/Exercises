@@ -1,11 +1,8 @@
-var btn = document.querySelector('tr');
+var btn = document.querySelector('table');
 btn.addEventListener("click", myFunction);
 function myFunction(){
-  this.valor = event.target.value;
-  return valor;
-}
-var valor = ''
-changeSC(valor);
+  var valor = event.target.value;
+  changeSC(valor);
+};
 function changeSC(x){
-  document.querySelector('p').innerHTML = x;
-}
+  document.querySelector('p').innerHTML = x;}
