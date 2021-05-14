@@ -1,54 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conversão bordas randius com javascript e metodo this</title>
-</head>
-<body>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="container">
   <div class="cube-all">
-    <div class="cube-top">      
+    <div class="cube-top">
+      <p></p>
     </div>
     <div class="cube-bot">
       <table>
         <tr class="title">
-          <td><button>%</button></td>
-          <td><button>CE</button></td>
-          <td><button>C</button></td>
-          <td><button><span class="material-icons">backspace</span></button></td>
+          <td><button onclick="calculadora.valor(this.value);"value=''>%</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value=''>CE</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value=''>C</button></td>
+          <td><button onclick="calculadora.numero = ''"><span class="material-icons">
+                backspace
+              </span></button></td>
         </tr>
         <tr>
-          <td><button>7</button></td>
-          <td><button>5</button></td>
-          <td><button>9</button></td>
-          <td><button>*</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='7'>7</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='8'>8</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='9'>9</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='*'>*</button></td>
         </tr>
         <tr>
-          <td><button>4</button></td>
-          <td><button>5</button></td>
-          <td><button>6</button></td>
-          <td><button>-</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='4'>4</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='5'>5</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='6'>6</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='-'>-</button></td>
         </tr>
         <tr>
-          <td><button>1</button></td>
-          <td><button>2</button></td>
-          <td><button>3</button></td>
-          <td><button>+</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='1'>1</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='2'>2</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='3'>3</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='+'>+</button></td>
         </tr>
         <tr>
-          <td><button></button></td>
-          <td><button>0</button></td>
-          <td><button>,</button></td>
-          <td><button>=</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value=''></button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='0'>0</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value=','>,</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='='>=</button></td>
         </tr>
-        
       </table>
     </div>
   </div>
 </div>
-</body>
-</html>
