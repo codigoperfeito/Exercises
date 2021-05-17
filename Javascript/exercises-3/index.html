@@ -2,15 +2,15 @@
 <div class="container">
   <div class="cube-all">
     <div class="cube-top">
-      <input type="text" id="boxValor" value="">
+      <p></p>
     </div>
     <div class="cube-bot">
       <table>
         <tr class="title">
           <td><button onclick="calculadora.valor(this.value);"value='%'>%</button></td>
           <td><button onclick="calculadora.valor(this.value);" value=''>CE</button></td>
-          <td><button onclick="calculadora.valor(this.value);" value=''>C</button></td>
-          <td><button onclick="calculadora.numero = ''"><span class="material-icons">
+          <td><button onclick="calculadora.numero = '';" value=''>C</button></td>
+          <td><button onclick="calculadora.backspace();"><span class="material-icons">
                 backspace
               </span></button></td>
         </tr>
@@ -35,7 +35,7 @@
         <tr>
           <td><button onclick="calculadora.valor(this.value);" value=''></button></td>
           <td><button onclick="calculadora.valor(this.value);" value='0'>0</button></td>
-          <td><button onclick="calculadora.valor(this.value);" value=','>,</button></td>
+          <td><button onclick="calculadora.valor(this.value);" value='.'>.</button></td>
           <td><button onclick="calculadora.calcular()" value='='>=</button></td>
         </tr>
       </table>
