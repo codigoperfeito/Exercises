@@ -3,17 +3,22 @@ const calculadora = {
   fimCalc : '',
   valor(x){
     this.numero += x;
-    let y = parseInt(this.numero.length - 2);
-    let z = this.numero.substring(y);
+    if(this.numero.charCodeAt() >= 48){
+    let z = this.numero.charAt(this.numero.length-2) + this.numero.charAt(this.numero.length-1);
     if (z == "%%" || z == "++" || z == "--" || z == "**" || z == "//" || z == ".."){
       let c = parseInt(this.numero.length - 1);
         let j = this.numero.substring(0 , c);
         this.numero = j;
      };
+    }else{
+  let c = parseInt(this.numero.length - 1);
+        let j = this.numero.substring(0 , c);
+        this.numero = j;
+};
   },
   backspace(){
     this.numero = this.numero.toString();
-    var x = parseInt(this.numero.length - 1);
+    var x = parseInt(this.numero.length - 2);
     console.log(x);
     var valor = this.numero.substring(0 , x);
     console.log(valor);
