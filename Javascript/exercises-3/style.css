@@ -4,6 +4,7 @@ html {
   height: 100vh;
   align-items: center;
   justify-content: center;
+  background-color: #000;
 }
 .cube-all{
   background-color: #212121;
@@ -19,6 +20,19 @@ html {
   background-color: #fff;
   width: 95%;
   margin: 3px;
+  display: flex;
+  position: relative;
+}
+p{
+  word-wrap: break-word;
+  flex-direction: column;
+  position: absolute;
+  text-align: end;
+  bottom: 0;
+  width: 95%;
+  padding: 10px;
+  font-size: 30px;
+  margin: -10px ;
 }
 table{
   display: flex;
@@ -28,3 +42,4 @@ button{
   width: 3.5em;
   height: 3em;
 }
+
