@@ -8,7 +8,7 @@ const calculator = {
     var y = this.number.charAt(this.number.length-2);
     var y = y.charCodeAt();
     if (z >= 48 || y >= 49){
-      //true carai
+      //true
     }else {
       let c = parseInt(this.number.length - 1);
       let j = this.number.substring(0, c);
