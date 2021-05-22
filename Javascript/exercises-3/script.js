@@ -23,7 +23,6 @@ const calculadora = {
   },
   calcular() {
     this.fimCalc = eval(this.numero.split("").join(""));
-    console.log(this.fimCalc);
     this.numero = this.fimCalc.toString();
     if (this.numero.length >= 39) {
       this.numero = "erro: valor muito alto";
