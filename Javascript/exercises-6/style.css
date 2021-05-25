@@ -1,0 +1,53 @@
+.container{
+  width: 500px;
+  margin: auto;
+  height: 500px;
+}
+.list{
+  width: auto;
+  height:auto;
+  background-color: #212121;
+  padding: 15px;
+  box-shadow: .5rem .5rem .0 #fab700;
+  border-radius: 10px;
+  border: 3px solid #fab700;  
+}
+.list ul{
+  display: flex;
+  list-style: none;
+  flex-direction: column;}
+li{
+  display:flex;
+  width: 100px;
+  border-radius: 10px;
+  color: #000;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  padding: 5px;
+  background-color: yellow;
+  margin: 5px;
+}
+label{
+  width:80px;
+}
+.menu{
+  position:relative;
+  visibility: hidden;
+  opacity: 0;
+  transition: visible 0s, opacity 2s;
+}
+li:hover .menu{
+  opacity: 1;
+  visibility: visible;
+    
+}
+.ulRelative{
+  position:absolute; 
+  font-size: 15px;  
+  top: -9px;
+}
+.ulRelative li{
+  width: 290px;  
+  border: 1px #000 solid;
+}
+
