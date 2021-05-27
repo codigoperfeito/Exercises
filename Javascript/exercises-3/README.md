@@ -66,7 +66,7 @@ onclick = evento de clicar em javascript*
 
 - **Adicionado icone do google no "backspace"**
 
-`` <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> `` // adicionando link do google de icones
+`` <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> `` // adicionando link do google de icones <br>
 `` <span class="material-icons"> `` // spam material-icons significa icone de apagar do google
 
 # 2️⃣ Montando as funcionalidades da calculadora.
