@@ -19,12 +19,22 @@
 - <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element/innerHTML">innerHTML</a>
 
 
+**Como vocês podem ver a cima, é o link da documentação de cada um dos metodos utilizados pra ajudar voces a estarem compreendo melhor, mais pra frente irei fazer uma simplificação da documentação pra vocês caso vocês queiram ( deixam nos comentários do youtube)**
 
+*Essa planejamento de aula foi dividido em duas etapas, a primeira é como fazer o style da calculadora e o segundo as funcionalidades, então vamos começar ...*
 
+# 1️⃣ Montando style da calculadora.
 
-
-
-
-the idea of this exercise is to create a calculator using javascript, so ... we use HTML5 and CSS3 to compose the interface of our calculator.
+### Exemplo da calculadora funcionando. <br> <br>
 
 ![Gif exercises 3](https://github.com/codigoperfeito/Exercises/blob/main/Javascript/exercises-3/c8515301bf404eec97ef99e6bda235fc15_45_55%20(1).gif?raw=true)
+
+***Como foi feito o designer ?***
+
+- Background escuro
+- Dividio em duas partes ( cima e baixo )
+- Sombra amarelo escuro
+- Numero em tabelas
+- 5 fileiras na parte de baixo
+- Parte de cima com background branco
+- Adicionado icone do google no "backspace"
