@@ -26,13 +26,48 @@ O exercicio que nós vamos fazer é uma calculadora bem completinha com diversos
 
 ***Como foi feito o designer ?***
 
-- Fundo escuro
-- Dividido em duas partes ( cima e baixo )
-- Sombra amarelo escuro
-- Botões dos numeros dentro de tabelas
-- 5 fileiras na parte de baixo
-- Parte de cima com fundo branco
-- Adicionado icone do google no "backspace"
+- **Fundo escuro**
+
+`` (TAG HTML) { background-color: #fff; } `` // adicionando fundo escuro a um elemtento.<br>
+
+- **Dividido em duas partes ( cima e baixo )**<br>
+
+`` <div class="cube-top"> `` // parte de cima <br>
+`` <div class="cube-bot"> `` // parte de baixo<br>
+
+- **Sombra e borda amarelo escuro**<br>
+
+`` (TAG HTML) { box-shadow: .5rem .5rem 0 #fab700; } `` // adicionando sombra amarela escura<br>
+`` (TAG HTML) { border: 3px solid #fab700; } `` // adicionando bordar amarela escura <br>
+
+- **Botões dos numeros dentro de tabelas**
+
+ ```   
+  <table>
+     <tr class="title">
+       c
+     </tr>
+  </table>
+```
+
+*table = tabela <br>
+tr = coluna <br>
+td = linha <br>
+button = botão <br>
+onclick = evento de clicar em javascript*
+
+- 5 **fileiras na parte de baixo**
+
+``<td><button onclick="calculadora.valor(this.value);" value='%'>% </button></td>`` // fileiras
+
+- **Parte de cima com fundo branco**
+
+`` (TAG HTML) {background-color: #fff;}`` // fundo branco
+
+- **Adicionado icone do google no "backspace"**
+
+`` <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> `` // adicionando link do google de icones
+`` <span class="material-icons"> `` // spam material-icons significa icone de apagar do google
 
 # 2️⃣ Montando as funcionalidades da calculadora.
 
