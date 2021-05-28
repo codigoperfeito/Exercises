@@ -1,4 +1,4 @@
-<b>Folder of javascript</b>
+# Folder of javascript
 
 ![gif javascript](https://ronanlopes.me/wp-content/uploads/2020/11/javascript.png)
 
