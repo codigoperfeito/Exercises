@@ -6,7 +6,7 @@
 
 ### Obejtivo do exercicio
 
-- Criar um botão que ao clicar você consegue aumentar ou diminuir outro elemento(objeto da pagina)
+- Criar um botão que ao clicar você consegue aumentar ou diminuir outro elemento(objeto da pagina) utilizando operador ternário no lugar do 'if'.
 
 ### Exemplo do exercicio pronto.
 
