@@ -14,7 +14,9 @@
 
 ### resultado final
 
-![GIF](https://github.com/codigoperfeito/Exercises/blob/main/Javascript/exercises-8/03265840ca664f8e91c6f11cd62c679616_49_41%20(2).gif?raw=true) <br><br><br>
+![GIF](https://github.com/codigoperfeito/Exercises/blob/main/Javascript/exercises-8/03265840ca664f8e91c6f11cd62c679616_49_41%20(2).gif?raw=true) <br>
+
+*<a href="https://codepen.io/codigoperfeito/full/yLMpOao"> CLIQUE AQUI E VÁ PARA O EXERCICIO JÁ PRONTO E ENTENDA MELHOR</a> <br><br><br>*
 
 
 # KEYBOARD CODE CAPTURE WINDOW WITH.
@@ -31,6 +33,9 @@
 
 ### final result
 
-![GIF](https://github.com/codigoperfeito/Exercises/blob/main/Javascript/exercises-8/03265840ca664f8e91c6f11cd62c679616_49_41%20(2).gif?raw=true)
+![GIF](https://github.com/codigoperfeito/Exercises/blob/main/Javascript/exercises-8/03265840ca664f8e91c6f11cd62c679616_49_41%20(2).gif?raw=true)<br>
+
+
+*<a href="https://codepen.io/codigoperfeito/full/yLMpOao"> CLICK HERE AND GO TO THE EXERCISE NOW READY AND UNDERSTAND BETTER </a> <br> <br> <br>*
 
 
