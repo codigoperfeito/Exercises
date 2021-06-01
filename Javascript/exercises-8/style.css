@@ -1,0 +1,28 @@
+html{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  border-radius: 15px;
+  width: 500px;
+  border: 3px solid #fab700;
+  box-shadow: 0.5em 0.5em 0 #fab000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cube{
+  flex-direction: column;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  color: #fff;
+}
+h2{
+  height: 20px;
+}
