@@ -1,7 +1,6 @@
-var body = document.querySelector('body');
-var text = document.querySelector('h2');
-body.addEventListener('keydown', capture);
+window.addEventListener('keydown', capture);
 function capture(){
+  var text = document.querySelector('h2');
   var x = window.event.key;
-  text.innerHTML = x.toUpperCase();
-}
+  text.textContent = x.toUpperCase();
+} 
