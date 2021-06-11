@@ -1,0 +1,1 @@
+# carregamento pilha / loadding charge
