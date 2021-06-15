@@ -2,7 +2,7 @@
 
 ![gif javascript](https://ronanlopes.me/wp-content/uploads/2020/11/javascript.png)
 
-1 - method filter to block change of all value not is number
+1 - method filter to block change of all value not is number<br>
 2 - exercises of border with this changing on live<br>
 3 - create a calculator using javascript.<br>
 4 - create a button to back from top<br>
