@@ -1,0 +1,48 @@
+html{
+  background-color: #212121;
+  color: #fff;
+}
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.botoesAll{
+  width: 300px;
+  position: absolute;
+  right: 100px;
+}
+.botoes{
+  font-size: 26px;
+  justify-content: flex-end;
+  display: flex;
+}
+.image{
+  position: absolute;
+  left: 150px;
+  display: flex;
+  border: 1px solid;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 10px;
+  background-image: url('https://i.ibb.co/H2YG9Dn/zelda.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px;
+}
+canvas{
+  display: flex;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000;
+}
+.img{  
+  transition: all 1s;
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 1px solid red;
+  left: 0px;
+  top: 0px
+}
