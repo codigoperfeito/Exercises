@@ -1,0 +1,23 @@
+html{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  background-color: #212121;
+  flex-direction: column;
+}
+*{
+  box-sizing: border-box;
+}
+.zoomImg{
+  position:relative;
+}
+.pseudo{
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ff0000;
+  position: absolute;
+}
+#result{
+  border: 1px solid #fff;
+}
