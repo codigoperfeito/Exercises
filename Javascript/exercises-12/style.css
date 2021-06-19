@@ -8,6 +8,7 @@ html{
 }
 *{
   box-sizing: border-box;
+  margin: 0;
 }
 .zoomImg{
   position:relative;
@@ -20,4 +21,5 @@ html{
 }
 #result{
   border: 1px solid #fff;
+  background-repeat: no-repeat;
 }
