@@ -21,10 +21,14 @@ function zoomImage(imageId, resultId){
   // calculo para pegar valor de posições para RESULT 
   // de acordo com tamanho de PSEUDO
 
-  zx = img.offsetWidth / pseudo.offsetWidth;
-  zy = img.offsetHeight / pseudo.offsetHeight;
+  zx = img.width / pseudo.offsetWidth;
+  zy = img.width / pseudo.offsetHeight;
+
+  zrw = img.offsetWidth * zx;
+  zrh = img.offsetHeight * zy;
 
   // adicionando style de RESULT para ficar do tamanho da IMG
+  
   resunt.style.width = img.offsetWidth + "px";
   resunt.style.height = img.offsetHeight + "px";
 
@@ -33,11 +37,11 @@ function zoomImage(imageId, resultId){
   pseudo.addEventListener('mousemove', pseudoMove);
 
   // funções
-  
-  function pseudoMove(e){
+
+  function pseudoMove(){
     // adicionando a função "get..." no pos para acessar valores
 
-    pos = getCursorPos(e);
+    pos = getCursorPos();
     
     // acessando valores com pos
     // calculo para pegar valor correto do mouse adicionando cursor
@@ -71,8 +75,12 @@ function zoomImage(imageId, resultId){
     /* fazendo nosso mouse se mover */
     pseudo.style.left = pos.a.left + x + "px";
     pseudo.style.top = pos.a.top + y + "px";
+
+    result.style.backgroundSize = zrw + 'px ' + zrh + 'px';
+    result.style.backgroundImage = "url(https://i.ibb.co/H2YG9Dn/zelda.png)";
+    resunt.style.backgroundPosition = - x * + (zrw / result.offsetWidth) + "px " + -y * (zrh / result.offsetHeight) + "px";
   }
-  function getCursorPos(e){
+  function getCursorPos(){
     var a, e, x, y;
 
     //pegando evento window
