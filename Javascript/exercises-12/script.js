@@ -1,16 +1,39 @@
 function zoomImage(imageId, resultId){
+
+  // criando variaveis que serão usadas 
   var img,resunt,pseudo, zx, zy;
+
+  // adicionando o DOM a variaveis 
   img = document.getElementById(imageId);
   resunt = document.getElementById(resultId);
+
+  // criando elemento PSEUDO 
+
   pseudo = document.createElement('div');
+
+  // criando class e colocando nome da class no PSEUDO
+
   pseudo.setAttribute('class','pseudo');
+
+  // adicionando PSEUDO antes do IMG
   img.parentElement.insertBefore(pseudo, img)
+
+  // calculo para pegar valor de posições para RESULT 
+  // de acordo com tamanho de PSEUDO
+
   zx = img.offsetWidth / pseudo.offsetWidth;
   zy = img.offsetHeight / pseudo.offsetHeight;
+
+  // adicionando style de RESULT para ficar do tamanho da IMG
   resunt.style.width = img.offsetWidth + "px";
   resunt.style.height = img.offsetHeight + "px";
+
+  // Adicionando eventos
   img.addEventListener('mousemove', pseudoMove);
   pseudo.addEventListener('mousemove', pseudoMove);
+
+  // funções
+  
   function pseudoMove(e){
     // adicionando a função "get..." no pos para acessar valores
 
@@ -26,17 +49,24 @@ function zoomImage(imageId, resultId){
     // apos calculos vamos colocar posição do x que será movimentação
     // do nosso bloco de acordo com mouse
     
+
+    // codigo para ele não ficar atrás ( -X / -Y ) do quadrado da imagem
+
     if (x < 0){
       x = 0;
     }
-    if (x > img.width - pseudo.offsetWidth ){
-      x = img.width - pseudo.offsetWidth;
-    }
-    if (y > img.height - pseudo.offsetHeight){
-      y = img.height - pseudo.offsetHeight;
-    }
+    
     if (y < 0){
       y = 0;
+    }
+
+    // codigo para ele não ultrapassar o quadrado da imagem (+X / +Y)
+
+    if (x > img.offsetWidth - pseudo.offsetWidth + window.pageXOffset){
+      x = img.offsetWidth - pseudo.offsetWidth + window.pageXOffset;
+    }
+    if (y > img.offsetHeight - pseudo.offsetHeight + window.pageYOffset){
+      y = img.offsetHeight - pseudo.offsetHeight + window.pageYOffset;
     }
     /* fazendo nosso mouse se mover */
     pseudo.style.left = pos.a.left + x + "px";
@@ -55,6 +85,13 @@ function zoomImage(imageId, resultId){
 
     x = e.pageX - a.left;
     y = e.pageY - a.top;
+
+    // adicionando valor de acrescento de scroll caso tenha.
+    // para o mouse andar junto com quadrado
+
+    x += window.pageXOffset;
+    y += window.pageXOffset;
+
 
     //retornando valores para serem usados em outra função
     
