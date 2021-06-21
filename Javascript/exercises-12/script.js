@@ -61,9 +61,11 @@ function zoomImage(imageId, resultId){
   // funções
   function pseudoVisible() {   
     pseudo.style.opacity = 1;
+    result.style.opacity = 1;
   };
   function pseudoHidden() {    
-    pseudo.style.opacity = 0;    
+    pseudo.style.opacity = 0; 
+    result.style.opacity = 0;   
   };
 
   function pseudoMove(e){
