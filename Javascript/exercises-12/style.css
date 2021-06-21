@@ -14,8 +14,8 @@ html{
   position:relative;
 }
 .pseudo{
-  width: 100px;
-  height: 100px;
+  width: 99px;
+  height: 99px;
   border: 1px solid #ff0000;
   position: absolute;
 }
