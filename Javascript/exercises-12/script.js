@@ -21,8 +21,10 @@ function zoomImage(imageId, resultId){
   // calculo para pegar valor de posições para RESULT 
   // de acordo com tamanho de PSEUDO
 
-  zx = img.width / pseudo.offsetWidth;
-  zy = img.width / pseudo.offsetHeight;
+  zx = img.clientWidth / pseudo.clientWidth;
+  zy = img.clientHeight / pseudo.clientHeight;
+
+  // calculando tamanho da BG do result
 
   zrw = img.offsetWidth * zx;
   zrh = img.offsetHeight * zy;
@@ -38,10 +40,10 @@ function zoomImage(imageId, resultId){
 
   // funções
 
-  function pseudoMove(){
+  function pseudoMove(e){
     // adicionando a função "get..." no pos para acessar valores
 
-    pos = getCursorPos();
+    pos = getCursorPos(e);
     
     // acessando valores com pos
     // calculo para pegar valor correto do mouse adicionando cursor
@@ -52,8 +54,6 @@ function zoomImage(imageId, resultId){
 
     // apos calculos vamos colocar posição do x que será movimentação
     // do nosso bloco de acordo com mouse
-    
-
     // codigo para ele não ficar atrás ( -X / -Y ) do quadrado da imagem
 
     if (x < 0){
@@ -66,19 +66,19 @@ function zoomImage(imageId, resultId){
 
     // codigo para ele não ultrapassar o quadrado da imagem (+X / +Y)
 
-    if (x > img.offsetWidth - pseudo.offsetWidth + window.pageXOffset){
-      x = img.offsetWidth - pseudo.offsetWidth + window.pageXOffset;
+    if (x > img.offsetWidth - pseudo.offsetWidth){
+      x = img.offsetWidth - pseudo.offsetWidth;
     }
-    if (y > img.offsetHeight - pseudo.offsetHeight + window.pageYOffset){
-      y = img.offsetHeight - pseudo.offsetHeight + window.pageYOffset;
+    if (y > img.offsetHeight - pseudo.offsetHeight){
+      y = img.offsetHeight - pseudo.offsetHeight;
     }
     /* fazendo nosso mouse se mover */
-    pseudo.style.left = pos.a.left + x + "px";
-    pseudo.style.top = pos.a.top + y + "px";
+    pseudo.style.left = (pos.a.left + window.pageXOffset) + x + "px";
+    pseudo.style.top = (pos.a.top + window.pageYOffset) + y + "px";
 
     result.style.backgroundSize = zrw + 'px ' + zrh + 'px';
-    result.style.backgroundImage = "url(https://i.ibb.co/H2YG9Dn/zelda.png)";
-    resunt.style.backgroundPosition = - x * + (zrw / result.offsetWidth) + "px " + -y * (zrh / result.offsetHeight) + "px";
+    result.style.backgroundImage = "url(" + img.src + ")";
+    resunt.style.backgroundPosition = - (x * zx) + "px " + - (y * zy)  + "px";
   }
   function getCursorPos(){
     var a, e, x, y;
@@ -97,9 +97,8 @@ function zoomImage(imageId, resultId){
     // adicionando valor de acrescento de scroll caso tenha.
     // para o mouse andar junto com quadrado
 
-    x += window.pageXOffset;
-    y += window.pageXOffset;
-
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
 
     //retornando valores para serem usados em outra função
     
