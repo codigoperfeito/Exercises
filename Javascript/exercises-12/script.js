@@ -18,16 +18,16 @@ function zoomImage(imageId, resultId){
 
   // calculo para pegar valor de posições para RESULT 
   // de acordo com tamanho de PSEUDO
-  zx = img.width / pseudo.clientWidth;
-  zy = img.height / pseudo.clientHeight;
+  zx = img.offsetWidth / pseudo.offsetWidth;
+  zy = img.offsetWidth / pseudo.offsetWidth;
 
   // calculando tamanho da BG do result
-  zrw = img.width * zx;
-  zrh = img.height * zy;
+  zrw = img.offsetWidth * zx;
+  zrh = img.offsetHeight * zy;
 
   // adicionando style de RESULT para ficar do tamanho da IMG  
-  resunt.style.width = img.width + "px";
-  resunt.style.height = img.height + "px";
+  resunt.style.width = img.offsetWidth + "px";
+  resunt.style.height = img.offsetWidth + "px";
 
   // Adicionando eventos
 
@@ -66,7 +66,7 @@ function zoomImage(imageId, resultId){
     // codigo para ele não ficar atrás ( -X / -Y ) do quadrado da imagem
 
     if (x < 0){
-      x = 0;    
+      x = 0;
     }
     
     if (y < 0){
