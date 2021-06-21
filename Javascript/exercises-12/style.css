@@ -10,8 +10,11 @@ html{
   box-sizing: border-box;
   margin: 0;
 }
-.zoomImg{
-  position:relative;
+.zooImg{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .pseudo{
   width: 100px;
@@ -21,6 +24,13 @@ html{
   opacity: 0;
 }
 #result{
+  opacity: 0;
   border: 1px solid #fff;
   background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+#image{
+  display: flex;
 }
