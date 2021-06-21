@@ -67,23 +67,19 @@ function zoomImage(imageId, resultId){
 
     if (x < 0){
       x = 0;    
-      pseudo.style.opacity = 1;
     }
     
     if (y < 0){
       y = 0;
-      pseudo.style.opacity = 1;
     }
 
     // codigo para ele não ultrapassar o quadrado da imagem (+X / +Y)
 
     if (x > img.offsetWidth - pseudo.offsetWidth){
       x = img.offsetWidth - pseudo.offsetWidth;
-      pseudo.style.opacity = 1;
     }
     if (y > img.offsetHeight - pseudo.offsetHeight){
       y = img.offsetHeight - pseudo.offsetHeight;
-      pseudo.style.opacity = 1;
     }
     /* fazendo nosso mouse se mover e adicionando a diferença
     da dela porque pos.a é calculo da posição da img logo precisa
