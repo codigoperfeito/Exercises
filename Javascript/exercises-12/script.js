@@ -16,19 +16,37 @@ function zoomImage(imageId, resultId){
   // adicionando PSEUDO antes do IMG
   img.parentElement.insertBefore(pseudo, img)
 
-  // calculo para pegar valor de posições para RESULT 
-  // de acordo com tamanho de PSEUDO
-  zx = img.offsetWidth / pseudo.offsetWidth;
-  zy = img.offsetWidth / pseudo.offsetWidth;
+  // Calculo de tamanho (width / height) dividido por 2
+
+  x = (img.clientWidth / pseudo.clientWidth) / 2;
+  y = (img.clientHeight / pseudo.clientHeight) / 2;
+
+  // condional para pegar tamanho do maior e colocar no tamanho
+  // do menor divido por 2
+
+  if (x >= y) {
+    zx = (img.clientWidth / pseudo.clientWidth) / 2;
+    zy = (img.clientWidth / pseudo.clientWidth) / 2;
+  }else{
+    zx = (img.clientHeight / pseudo.clientHeight) / 2;
+    zy = (img.clientHeight / pseudo.clientHeight) / 2;
+  }
 
   // calculando tamanho da BG do result
-  zrw = img.offsetWidth * zx;
-  zrh = img.offsetHeight * zy;
 
-  // adicionando style de RESULT para ficar do tamanho da IMG  
-  resunt.style.width = img.offsetWidth + "px";
-  resunt.style.height = img.offsetWidth + "px";
+  zrw = img.width * zx;
+  zrh = img.height * zy;
 
+  // Condicional para adicionar style no RESULT de acordo com
+  // maior dos dois divido por 2
+
+  if (x >= y) {
+    resunt.style.width = (img.clientWidth / 2) + "px";
+    resunt.style.height = (img.clientWidth / 2) + "px";
+  } else{    
+    resunt.style.height = (img.clientHeight / 2) + "px";
+    resunt.style.width = (img.clientHeight / 2) + "px";
+  }
   // Adicionando eventos
 
   img.addEventListener('mouseover', pseudoVisible);
@@ -56,7 +74,7 @@ function zoomImage(imageId, resultId){
     
     // acessando valores com pos
     // calculo para pegar valor correto do mouse adicionando cursor
-    // no meio do bloco 
+    // no meio
 
     x = pos.x - (pseudo.offsetWidth / 2);
     y = pos.y - (pseudo.offsetHeight / 2);
