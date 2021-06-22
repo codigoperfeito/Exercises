@@ -16,15 +16,22 @@ function zoomImage(imageId, resultId){
   // adicionando PSEUDO antes do IMG
   img.parentElement.insertBefore(pseudo, img)
 
-  // Calculo de tamanho (width / height) dividido por 2
+  // calculando tamanho da imagem referencia a propoção que
+  // voce quer que veja o zoom pegando pelo menor
 
-  x = (img.clientWidth / pseudo.clientWidth) / 2;
-  y = (img.clientHeight / pseudo.clientHeight) / 2;
+  if (img.offsetWidth > img.offsetHeight){
+      img.style.width = '1200px';
+  } else{
+      img.style.height = '900px';
+  };
+  // Calculo de tamanho (width / height)
+  x = img.clientWidth / pseudo.clientWidth;
+  y = img.clientHeight / pseudo.clientHeight;
 
   // condional para pegar tamanho do maior e colocar no tamanho
   // do menor divido por 2
 
-  if (x >= y) {
+  if (y >= x) {    
     zx = (img.clientWidth / pseudo.clientWidth) / 2;
     zy = (img.clientWidth / pseudo.clientWidth) / 2;
   }else{
@@ -34,13 +41,13 @@ function zoomImage(imageId, resultId){
 
   // calculando tamanho da BG do result
 
-  zrw = img.width * zx;
-  zrh = img.height * zy;
+  zrw = img.clientWidth * zx;
+  zrh = img.clientHeight * zy;
 
   // Condicional para adicionar style no RESULT de acordo com
   // maior dos dois divido por 2
 
-  if (x >= y) {
+  if (y >= x) {
     resunt.style.width = (img.clientWidth / 2) + "px";
     resunt.style.height = (img.clientWidth / 2) + "px";
   } else{    
