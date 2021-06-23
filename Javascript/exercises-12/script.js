@@ -152,4 +152,7 @@ function zoomImage(imageId, resultId){
     };
   }
 };
+
+// chamando as funções 
+
 zoomImage("image" , "result");
